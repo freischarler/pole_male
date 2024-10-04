@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+.app__program_bg {
+  /*background: url("../../assets/bg.png");*/
+  background-color: white;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre las imágenes */
+}
+
+.image-box {
+    position: relative;
+    width: 32%; /* Ancho relativo de cada imagen */
+    max-width: 100%;
+    overflow: hidden; /* Ocultar partes que sobresalen */
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease, filter 0.3s ease; /* Transiciones suaves */
+}
+
+.image-box:hover img {
+    transform: scale(1.05); /* Efecto de mini zoom */
+    /*filter: blur(2px); /* Efecto de blur */
+
+    /* crear efecto oscurecer imagen */
+    filter: brightness(0.3);
+}
+
+
+.title {
+    font-family: var(--font-base);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+    padding: 10px;
+    pointer-events: none; /* Deshabilitar el clic en el texto */
+}
+
+.description {
+    font-family: var(--font-alt);
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px;
+    pointer-events: none; /* Deshabilitar el clic en el texto */
+}
+
+
+/* Diseño responsive: cuando el ancho de la pantalla es menor a 768px */
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

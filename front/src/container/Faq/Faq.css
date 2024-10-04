@@ -1,0 +1,76 @@
+.app__faq {
+  position: relative;
+  background-color: #f8f9fb;
+  padding: 3rem 0;
+}
+
+.accordion {
+    max-width: 600px; 
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.accordion-item {
+    background-color: #111;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    background-color: #FFFF;
+    color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-header.active {
+    background-color: black;
+    color: white;
+}
+
+.accordion-header:after {
+    content: '+';
+    font-size: 24px;
+}
+
+.accordion-header.active:after {
+    content: '-';
+}
+
+.accordion-content {
+    padding: 15px;
+    font-size: 14px;
+    display: none;
+    overflow: hidden;
+    color: black;
+    background-color: white;
+}
+
+.accordion-content p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .accordion {
+        padding: 10px;
+    }
+
+    .accordion-header {
+        font-size: 14px;
+    }
+
+    .accordion-content {
+        font-size: 12px;
+    }
+}
