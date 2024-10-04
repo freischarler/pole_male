@@ -29,11 +29,11 @@ const Testimonials = () => {
     <>
         <div className="app__testimonials"> {/*TODO!!! add a class name here*/}
             <div className="app__specialMenu-title">
-                <h1 className="headtext__cormorant_black">Testimonios</h1>
-                <h2 className="p__opensans_black">Experiencias de quienes ya se sumaron a nuestra comunidad de PoleSport y PoleDance.</h2>  
+                <h1 className="headtext__cormorant_black fade-in">Testimonios</h1>
+                <h2 className="p__opensans_black fade-in-2">Experiencias de quienes ya se sumaron a nuestra comunidad de PoleSport y PoleDance.</h2>  
             </div>
         
-            <div className="testimonials-container">
+            <div className="testimonials-container fade-in-25">
             {testimonials.map((testimonial, index) => (
                 <div key={index} className="testimonial">
                 <div className="cloud">

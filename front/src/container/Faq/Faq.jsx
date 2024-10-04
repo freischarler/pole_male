@@ -29,13 +29,12 @@ const Faq = () => {
 
   return (
     <div className="app__faq"> {/*TODO!!! add a class name here*/}
-
         <div className="app__specialMenu-title">
-          <h1 className="headtext__cormorant_black">FAQs</h1>
-          <h2 className="p__opensans_black">¿Tienes dudas? Aquí respondemos las preguntas más comunes sobre clases, equipo y niveles para que estés lista/o desde el día uno.</h2>  
+          <h1 className="headtext__cormorant_black fade-in">FAQs</h1>
+          <h2 className="p__opensans_black fade-in-2">¿Tienes dudas? Aquí respondemos las preguntas más comunes sobre clases, equipo y niveles para que estés lista/o desde el día uno.</h2>  
         </div>
 
-        <div className="accordion">
+        <div className="accordion fade-in-2">
         {questions.map((item, index) => (
             <div className="accordion-item" key={index}>
             <button

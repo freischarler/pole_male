@@ -6,12 +6,11 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const pages = [
-  { id: 0, name: "About", path: "about" },
+  { id: 0, name: "Clases", path: "class" },
   { id: 1, name: "Eventos", path: "events" },
-  { id: 2, name: "Clases", path: "class" },
-  { id: 3, name: "Fitness", path: "fitness" },
-  { id: 4, name: "Gallery", path: "galery" },
-  { id: 5, name: "Shop", path: "shop" },
+  { id: 2, name: "Fitness", path: "fitness" },
+  { id: 3, name: "Galeria", path: "galery" },
+  { id: 4, name: "Shop", path: "shop" },
 ]
 
 /*const settings = [
@@ -40,13 +39,13 @@ const Navbar = () => {
         
       </ul>
       <div className="app__navbar-login">
-        <a href="#login" className="p__opensans">
+        <Link to="/login" className="h__subtitle">
           Log In / Registration
-        </a>
-        <div />
+        </Link>
+        {/*<div />
         <a href="/" className="p__opensans">
           Book Table
-        </a>
+        </a>*/}
       </div>
       <div className="app__navbar-smallscreen">
         <GiHamburgerMenu

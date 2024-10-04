@@ -18,21 +18,21 @@ const Laurels = () => {
 
   return (
   <div className="app__wrapper_laurels section__padding" id="awards">
-    <div className="app__wrapper_img">
+    <div className="app__wrapper_img scale-up">
       <img src={images.pole_competencia_01} alt="pole_colors" />
     </div>
 
     <div className="app__wrapper_info_center">
-      <h2 className="headtext__cormorant_black" style={{ textAlign: "center" }}>Competencias</h2>
-      <h3 className="h__subtitle_black" style={{ textAlign: "center" }}>Cada premio refleja todo mi esfuerzo y dedicación en esta apasionante disciplina.</h3>
-      <div className="app__laurels_awards">
+      <h2 className="headtext__cormorant_black fade-in" style={{ textAlign: "center" }}>Competencias</h2>
+      <h3 className="h__subtitle_black fade-in-2" style={{ textAlign: "center" }}>Cada premio refleja todo mi esfuerzo y dedicación en esta apasionante disciplina.</h3>
+      <div className="app__laurels_awards fade-in-25">
         {data.awards.map((award) => (
           <AwardCard award={award} key={award.title} />
         ))}
       </div>
     </div>
 
-    <div className="app__wrapper_img">
+    <div className="app__wrapper_img scale-up">
       <img src={images.pole_competencia_02} alt="pole_colors" />
     </div>
   

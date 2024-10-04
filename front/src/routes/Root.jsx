@@ -1,24 +1,19 @@
 import React from 'react'
+import {  Routes, Route } from "react-router-dom";
+import useFadeInOnScroll from '../hooks/useFadeInOnScroll';
 import { useState, useEffect } from 'react'
 
+import { Home } from '../pages/Home'
+import { Login } from '../pages/Login'
+
 import {
-    AboutUs,
-    //Chef,
-    //FindUs,
     Footer,
-    //Gallery,
-    Header,
-    Testimonials,
-    Faq,
-    //Intro,
-    Laurels,
-    Programs,
   } from "../container";
   import { Navbar } from "../components";
 
 export const Root = () => {
     const [ , setLoggedIn] = useState(false)
-    //const [idx, setIdx] = useState(0)
+    useFadeInOnScroll();
   
     useEffect(() => {
       // Fetch the user email and token from local storage
@@ -26,27 +21,18 @@ export const Root = () => {
       // If the token/email does not exist, mark the user as logged out
       if (!user || !user.token) {
         setLoggedIn(false)
-        //setIdx(0)
         return
       }
     }, [])
 
-  return (
-    <div>
+    return (
+      <div>
         <Navbar />
-        <Header />
-        <Programs />
-        <AboutUs />
-        <Laurels />
-        {/*<SpecialMenu />*/}
-        <Faq />
-        {/*<Chef />*/}
-        {/*<Intro />*/}
-
-        {/*<Gallery />*/}
-        <Testimonials />
-        {/*<FindUs />*/}
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="login" element={<Login setLoggedIn={setLoggedIn} />} />
+        </Routes>
         <Footer />
-    </div>
-  )
+      </div>
+    );
 }
